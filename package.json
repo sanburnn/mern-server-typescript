@@ -1,0 +1,32 @@
+{
+  "name": "mern-home",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "node server.ts",
+    "dev": "nodemon server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/nodemailer": "^6.4.16",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^5.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.2",
+    "nodemailer": "^6.9.14"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/express": "^5.0.0",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2"
+  }
+}
