@@ -4,7 +4,7 @@ import Email from '../models/Email';
 
 const router = express.Router();
 
-router.post('/emails', async (req: Request, res: Response) => {
+router.post('/sendemail', async (req: Request, res: Response) => {
     const { email, date, description } = req.body;
 
     try {
@@ -15,18 +15,17 @@ router.post('/emails', async (req: Request, res: Response) => {
             host: "sandbox.smtp.mailtrap.io",
             port: 2525,
             auth: {
-                user: "b62ea467b36275", 
-                pass: "3729694a9c6ec3"  
+                user: "087a1ec9224a31", 
+                pass: "49af750bc3aa43"  
             }
         });
-
+        
         const mailOptions = {
             from: 'dimas@gmail.com',
             to: email, 
             subject: 'Hi Salam kenal',
             text: `You have created a new event on ${date}. Description: ${description}`
         };
-
         transporter.sendMail(mailOptions, (error, info) => {
             if (error) {
                 console.error('Error sending email:', error);
